@@ -9,14 +9,20 @@ AnimalRightsGroup::AnimalRightsGroup(int n_monkeys, int n_tigers, int n_fish)
 // Implement this (Observer part)
 void AnimalRightsGroup::update(AnimalEvent event)
 {
-    if (event == AnimalEvent::MonkeyFed)
+// discerns between different event via comparing to enum class inherinted from observer
+// internally stores the amount of events triggered
+
+    if (event == AnimalEvent::MonkeyFed) 
     {
+        n_monkeys_fed++; 
     }
     else if (event == AnimalEvent::TigerScratched)
     {
+        n_tigers_scratched++; 
     }
     else if (event == AnimalEvent::FishTeethCleaned)
     {
+        n_fish_teeth_brushed++;
     }
 }
 
